@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "br.com.brendon.tcc2"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    //    // https://mvnrepository.com/artifact/org.mapsforge/mapsforge-core
+    //    compile group: 'org.mapsforge', name: 'mapsforge-core', version: '0.9.1'
+    //    // https://mvnrepository.com/artifact/org.mapsforge/mapsforge-map-android
+    //    compile group: 'org.mapsforge', name: 'mapsforge-map-android', version: '0.9.1'
+    //    // https://mvnrepository.com/artifact/com.caverock/androidsvg
+    //    compile group: 'com.caverock', name: 'androidsvg', version: '1.2.2-beta-1'
+    //    // https://mvnrepository.com/artifact/org.mapsforge/mapsforge-map-reader
+    //    compile group: 'org.mapsforge', name: 'mapsforge-map-reader', version: '0.9.1'
+    //    // https://mvnrepository.com/artifact/org.mapsforge/mapsforge-themes
+    //    compile group: 'org.mapsforge', name: 'mapsforge-themes', version: '0.9.1'
+    //Dependências adicionadas por: Brendon L. Pasquim
+    //Baseado em: https://github.com/mapsforge/mapsforge/blob/master/docs/Integration.md
+    implementation 'org.mapsforge:mapsforge-core:0.9.1'
+    implementation 'org.mapsforge:mapsforge-map:0.9.1'
+    implementation 'org.mapsforge:mapsforge-map-reader:0.9.1'
+    implementation 'org.mapsforge:mapsforge-themes:0.9.1'
+    implementation 'net.sf.kxml:kxml2:2.3.0'
+    implementation 'org.mapsforge:mapsforge-map-android:0.9.1'
+    implementation 'com.caverock:androidsvg:1.2.2-beta-1'
+    implementation 'org.mapsforge:mapsforge-poi-android:0.9.1'
+    implementation 'org.mapsforge:spatialite-android:0.9.1'
+    implementation 'org.mapsforge:spatialite-android:0.9.1:natives-armeabi'
+    implementation 'org.mapsforge:spatialite-android:0.9.1:natives-armeabi-v7a'
+    implementation 'org.mapsforge:spatialite-android:0.9.1:natives-x86'
+    //    //Dependências para os Samples
+    //    implementation 'android.support:compatibility-v4:23.2.1'
+    implementation 'org.mapsforge:mapsforge-map-android-extras:0.9.0'
+    //    implementation 'org.mapsforge:mapsforge-samples-android:0.6.1'
+    implementation files('D:/Users/Brendon/AndroidStudioProjects/tcc2/libs/mapsforge-samples-android-0.6.1.jar')
+    implementation files('D:/Users/Brendon/AndroidStudioProjects/tcc2/libs/postgresql-42.2.2.jar')
+    implementation files('D:/Users/Brendon/AndroidStudioProjects/tcc2/libs/starmetal.jar')
+    implementation files('D:/Users/Brendon/AndroidStudioProjects/tcc2/libs/jsch-0.1.54-javadoc.jar')
+    implementation files('D:/Users/Brendon/AndroidStudioProjects/tcc2/libs/jsch-0.1.54.jar')
+}
